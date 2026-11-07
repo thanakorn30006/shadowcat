@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 #  SHADOW CAT — Remote Web/Terminal One-Liner Bootstrap Installer
-#  Usage: curl -fsSL https://thanakorn30006.github.io/get.sh | bash
+#  Usage: curl -fsSL https://raw.githubusercontent.com/thanakorn30006/shadowcat/main/get.sh | bash
 # ==============================================================================
 set -e
 

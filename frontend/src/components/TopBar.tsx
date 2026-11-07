@@ -135,7 +135,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onOpenVault, onOpenConverter }) 
 
         {/* Docs Link */}
         <a
-          href="http://localhost:3333/docs.html"
+          href="https://thanakorn30006.github.io/docs.html"
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs font-sans transition-colors"

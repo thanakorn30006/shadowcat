@@ -73,7 +73,7 @@ def detect_license():
                         "file_path": str(p),
                         "machine_id": machine_id,
                         "pro_features": False,
-                        "upgrade_url": "http://localhost:3333/pricing.html"
+                        "upgrade_url": "https://thanakorn30006.github.io/pricing.html"
                     }
             except Exception:
                 pass

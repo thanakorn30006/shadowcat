@@ -170,7 +170,7 @@ export const LicenseModal: React.FC<LicenseModalProps> = ({
             <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
               <span>Need a Pro Operator Lifetime license?</span>
               <a
-                href="http://localhost:3333/pricing.html"
+                href="https://thanakorn30006.github.io/pricing.html"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium"

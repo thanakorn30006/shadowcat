@@ -25,7 +25,7 @@
 
 * **สำหรับ macOS & Linux (Terminal / Bash / Zsh):**
   ```bash
-  curl -fsSL https://raw.githubusercontent.com/thanakorn30006/shadowcat/main/install.sh | bash
+  curl -fsSL https://raw.githubusercontent.com/thanakorn30006/shadowcat/main/get.sh | bash
   ```
 * **สำหรับ Windows (PowerShell):**
   ```powershell

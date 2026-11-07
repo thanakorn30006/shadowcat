@@ -22,9 +22,10 @@ env/
 # Node & Frontend
 node_modules/
 frontend/node_modules/
-frontend/dist/
-dist/
 .npm/
+# NOTE: frontend/dist is intentionally COMMITTED so `git clone` ships a ready-to-run
+# web UI (the backend serves it, and end users have no Node toolchain to build it).
+# Rebuild it with: cd frontend && npm run build
 
 # Uploads & Temporary artifacts
 .shadowsolve/
