@@ -1,0 +1,38 @@
+# Environment & Secrets
+.env
+*.env
+backend/secrets/
+*.key
+*.pem
+*.lic
+shadowcat.lic
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.npm/
+
+# Uploads & Temporary artifacts
+.shadowsolve/
+ctf_uploads/
+extracted/
+
+# Operating System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

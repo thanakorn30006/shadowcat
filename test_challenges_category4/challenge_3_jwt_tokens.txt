@@ -1,0 +1,15 @@
+=== JWT EXPLOITATION & ANALYSIS BENCHMARK ===
+
+Target Token (Signed with weak dictionary secret 'secret123'):
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoib3BlcmF0b3JfZ3Vlc3QiLCJyb2xlIjoidXNlciIsInNlY3JldF9mbGFnIjoiZmxhZ3tqd3Rfd2Vha19obWFjX3NlY3JldF9jcmFja2VkXzc3MjF9IiwiYWNjZXNzIjoicmVhZF9vbmx5In0.-nUBvStqqypMNvz43VJeYTAwqBOBw0nt6JelBHMnE28
+
+HOW TO TEST ON SHADOW CAT UI:
+1. Go to ShadowSolve UI -> 'JWT Studio'
+2. Paste the token into the JWT Input box.
+3. Click 'Decode & Inspect':
+   - Result: Automatically cracks weak secret 'secret123'!
+   - Result: Automatically forges 'alg: none' exploit token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoib3BlcmF0b3JfZ3Vlc3QiLCJyb2xlIjoidXNlciIsInNlY3JldF9mbGFnIjoiZmxhZ3tqd3Rfd2Vha19obWFjX3NlY3JldF9jcmFja2VkXzc3MjF9IiwiYWNjZXNzIjoicmVhZF9vbmx5In0.
+   - Reveals Target Flag: flag{jwt_weak_hmac_secret_cracked_7721}
+4. Click 'Forge / Tamper':
+   - Modify payload role to 'admin'
+   - Click 'Forge Token' to generate elevated signature!

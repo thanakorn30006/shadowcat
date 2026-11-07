@@ -1,0 +1,11 @@
+{
+  "title": "RSA Small N Factoring Challenge",
+  "n": "1000036000099",
+  "e": "65537",
+  "c": "577818213014",
+  "expected_p": 1000003,
+  "expected_q": 1000033,
+  "expected_d": 983264276609,
+  "expected_plaintext": "win!",
+  "instructions": "Go to 'Crypto' -> 'RSA Attacks' -> Paste n, e, c -> Click 'Execute Attacks' to factor n and derive private key d."
+}

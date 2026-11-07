@@ -1,0 +1,13 @@
+=== OPSEC HASH PRIVACY BENCHMARKS ===
+Test these hashes in ShadowSolve UI -> 'Hash Cracker':
+
+[TEST A: Instant Offline Memory Crack]
+Hash (MD5 of 'admin'):
+21232f297a57a5a743894a0e4a801fc3
+Result: Solved in < 0.00002 seconds without sending any packets outside!
+
+[TEST B: Confidential Unknown Hash - Air-Gapped Outbound Blocking]
+Hash:
+d41d8cd98f00b204e9800998ecf8427e_custom_confidential_client_hash
+Result with AIR_GAPPED=1:
+ShadowSolve strictly BLOCKS requests to third-party public crack services (CrackStation, Gromweb, md5decrypt) to preserve data privacy and prevent secret leakage!

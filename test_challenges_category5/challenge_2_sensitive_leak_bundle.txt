@@ -1,0 +1,16 @@
+// Confidential Deployment Script & Web Assets
+// Leaked internal developer credentials
+
+const AWS_ACCESS_KEY = "AKIAIOSFODNN7EXAMPLE";
+const DB_CONNECTION = "postgres://redteam:supersecret@10.0.4.15:5432/opsec_vault";
+const INTERNAL_API = "/api/v1/internal/admin/credentials";
+const BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbWluIn0.sig";
+
+// Exfiltrated Mission Intelligence:
+const OPSEC_FLAG = "flag{opsec_hardcoded_secret_token_leak_5521}";
+
+function connectRemote() {
+    fetch(INTERNAL_API, {
+        headers: { "Authorization": "Bearer " + BEARER_TOKEN }
+    });
+}

@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shadowcat-suite"
+version = "1.2.0"
+description = "[+] SHADOW CAT — Autonomous Cyber Operations & Tactical CTF Suite"
+readme = "README.md"
+# 3.14 is excluded: several pinned deps (scikit-learn, opencv-python) do not yet
+# ship wheels for it. 3.11–3.13 are the tested, recommended versions.
+requires-python = ">=3.10,<3.14"
+license = { text = "Proprietary" }
+authors = [
+    { name = "SHADOW CAT Team", email = "security@shadowcat.local" },
+]
+keywords = ["cybersecurity", "ctf", "forensics", "cryptanalysis", "waf-evasion", "pentesting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-multipart>=0.0.12",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.9.0",
+    "beautifulsoup4>=4.12.0",
+    "scikit-learn>=1.5.0",
+    "numpy>=2.0.0",
+    "joblib>=1.4.0",
+    # AI: code uses `from google import genai` (new google-genai SDK),
+    # not the deprecated google-generativeai package.
+    "google-genai>=0.3.0",
+    "openai>=1.50.0",
+    "Pillow>=10.0.0",
+    # Cryptography: required for offline Ed25519 license verification.
+    "cryptography>=42.0.0",
+    "pycryptodome>=3.20.0",
+]
+
+[project.optional-dependencies]
+# Optional forensics extras (features degrade gracefully if missing).
+# pyzbar also needs the native zbar lib: `brew install zbar` (macOS).
+forensics = [
+    "scapy>=2.5.0",
+    "python-evtx>=0.7.4",
+    "pypdf>=4.0.0",
+    "sympy>=1.12",
+    "opencv-python>=4.9.0",
+    "pyzbar>=0.1.9",
+]
+
+[project.scripts]
+shadowcat = "backend.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.png", "*.jpg", "*.json", "*.html", "*.css", "*.js", "*.wasm"]

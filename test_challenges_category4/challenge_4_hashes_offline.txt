@@ -1,0 +1,22 @@
+=== OFFLINE HIGH-YIELD HASH CRACKING BENCHMARKS ===
+Test these hashes in ShadowSolve UI -> 'Hash Cracker' (100% Offline in O(1) time):
+
+1. MD5 Hash (Password: 'admin'):
+   21232f297a57a5a743894a0e4a801fc3
+   Expected Cracked Plaintext: admin
+
+2. MD5 Hash (Password: '123456'):
+   e10adc3949ba59abbe56e057f20f883e
+   Expected Cracked Plaintext: 123456
+
+3. SHA256 Hash (Password: 'admin'):
+   8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+   Expected Cracked Plaintext: admin
+
+4. SHA1 Hash (Password: 'password'):
+   5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+   Expected Cracked Plaintext: password
+
+5. NTLM Hash (Password: 'operator'):
+   c99a6cf67f017e889b78a9c13e5ffb6c
+   Expected Cracked Plaintext: operator

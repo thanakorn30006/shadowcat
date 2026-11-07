@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  shadowcat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shadowcat-cyber-suite
+    restart: unless-stopped
+    ports:
+      # Publish on the host loopback only — the API has no authentication.
+      # To expose on the LAN (trusted networks only) change to "8000:8000".
+      - "127.0.0.1:8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

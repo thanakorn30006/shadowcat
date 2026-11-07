@@ -1,0 +1,14 @@
+=== ENCRYPTED OPERATOR TRANSMISSION ===
+Encoded Payload (Hex -> ROT13 -> Base64):
+4d7a6b754d336777724a5779707a41624d4a4d736f4b496671547973703345754d324973707a49776e4b4f794b334968707a53324d4a6b734147486b424b303d
+
+HOW TO SOLVE ON SHADOW CAT UI:
+Method A (Automated):
+  Go to 'Crypto' -> 'Magic Auto-Unwrap' -> Paste payload -> Click 'Magic Unwrap'
+Method B (CyberChef Pipeline):
+  Go to 'Crypto' -> 'CyberChef Studio'
+  Recipe Steps:
+    1. From Hex
+    2. ROT13
+    3. From Base64
+  Click 'Bake Recipe' -> Reveals Flag: flag{cyberchef_multi_stage_recipe_unravel_5519}

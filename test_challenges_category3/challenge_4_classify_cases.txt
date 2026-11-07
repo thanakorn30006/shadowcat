@@ -1,0 +1,23 @@
+=== CTF CHALLENGE CLASSIFICATION BENCHMARKS ===
+Test these prompts in ShadowSolve UI -> 'Classify' or 'Chat' to test AI/ML Auto-Categorization:
+
+[CASE 1: PWN]
+"We found a 32-bit x86 ELF binary running on port 1337 with buffer overflow in gets(). Can you help me find the offset to overwrite EIP and build a ret2libc ROP chain?"
+Expected Category: pwn
+Protection: NX Disabled, No Canary, No PIE
+
+[CASE 2: CRYPTO]
+"We intercepted RSA ciphertext c=... with modulus n=... and small public exponent e=3. Is this vulnerable to cube root or Hastad broadcast attack?"
+Expected Category: crypto
+
+[CASE 3: FORENSICS]
+"Analyze this memory dump .raw image using Volatility to find active process tree, hidden dll injection, and carved files from unallocated clusters."
+Expected Category: forensics
+
+[CASE 4: REVERSE ENGINEERING]
+"Decompile this stripped Go binary, locate main.checkPassword function, analyze byte array XOR loop, and bypass anti-debugging ptrace checks."
+Expected Category: rev
+
+[CASE 5: WEB EXPLOITATION]
+"Target web app has SQL injection in id parameter and JWT token with alg: none vulnerability leading to admin privilege escalation."
+Expected Category: web
